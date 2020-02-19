@@ -1,69 +1,123 @@
 import React from "react";
 import { MuiThemeProvider } from "@material-ui/core/styles";
+import { makeStyles } from '@material-ui/core/styles';
 import {
   Toolbar,
   Card,
   AppBar,
   CardHeader,
   CardContent,
-  Typography
+  Typography,
+  CardActionArea,
+  Button,
+  CardMedia,
+  CardActions
 } from "@material-ui/core";
-import CardDeck from 'react-bootstrap/CardDeck'
+import CardDeck from 'react-bootstrap/CardDeck';
+import CGACpic from "./static/images/cgac-profile.png";
 
 import theme from "./theme";
 
+const useStyles = makeStyles({
+    root: {
+      maxWidth: 345,
+    },
+    media: {
+      height: 140,
+    },
+  });
+
 const IndoorPools = () => {
+    const classes = useStyles();
   return (
     <MuiThemeProvider theme={theme}>
       <AppBar color="primary">
         <Toolbar>
           <Typography variant="h6" color="inherit">
-            Indoor Pools
+            City of London Aquatics
           </Typography>
         </Toolbar>
       </AppBar>
-      <CardDeck>
-  <Card>
-    <Card.Img variant="top" src="holder.js/100px160" />
-    <Card.Body>
-      <Card.Title>Card title</Card.Title>
-      <Card.Text>
-        This is a wider card with supporting text below as a natural lead-in to
-        additional content. This content is a little bit longer.
-      </Card.Text>
-    </Card.Body>
-    <Card.Footer>
-      <small className="text-muted">Last updated 3 mins ago</small>
-    </Card.Footer>
-  </Card>
-  <Card>
-    <Card.Img variant="top" src="holder.js/100px160" />
-    <Card.Body>
-      <Card.Title>Card title</Card.Title>
-      <Card.Text>
-        This card has supporting text below as a natural lead-in to additional
-        content.{' '}
-      </Card.Text>
-    </Card.Body>
-    <Card.Footer>
-      <small className="text-muted">Last updated 3 mins ago</small>
-    </Card.Footer>
-  </Card>
-  <Card>
-    <Card.Img variant="top" src="holder.js/100px160" />
-    <Card.Body>
-      <Card.Title>Card title</Card.Title>
-      <Card.Text>
-        This is a wider card with supporting text below as a natural lead-in to
-        additional content. This card has even longer content than the first to
-        show that equal height action.
-      </Card.Text>
-    </Card.Body>
-    <Card.Footer>
-      <small className="text-muted">Last updated 3 mins ago</small>
-    </Card.Footer>
-  </Card>
-</CardDeck>
+      <Card className={classes.root} style={{ marginTop: "5%" }}>
+          <CardActionArea>
+          <CardMedia
+          component="img"
+          alt="Canada Games Aquatic Center"
+          height="140"
+          img src="/static/images/cgac-profile.jpg"
+          title="Canada Games Aquatic Center"
+        />            
+              <CardContent>
+                  <Typography gutterBottom variant="h5" component="h2">
+                      Canada Games Aqautic Center
+                  </Typography>
+                  <Typography variant="body2" color="textSecondary" component="p">
+                      1045 Wonderland Rd North
+                  </Typography>
+              </CardContent>
+              
+          </CardActionArea>
+          <CardActions>
+              <Button size="small" color="primary">
+                  View Schedule
+              </Button>
+              <Button size="small" color="primary">
+                  Book Camp
+              </Button>
+          </CardActions>
+      </Card>
+      <Card className={classes.root} style={{ marginTop: "5%" }}>
+          <CardActionArea>
+              <CardMedia
+                className={classes.media}
+                img src="/static/images/cgacProfile.jpg"
+                title="Canada Games Aqautic Center"
+              /> 
+              <CardContent>
+                  <Typography gutterBottom variant="h5" component="h2">
+                     Carling Heights Optimist Community Center
+                  </Typography>
+                  <Typography variant="body2" color="textSecondary" component="p">
+                      1045 Wonderland Rd North
+
+                  </Typography>
+              </CardContent>
+          </CardActionArea>
+          <CardActions>
+              <Button size="small" color="primary">
+                  View Schedule
+              </Button>
+              <Button size="small" color="primary">
+                  Book Camp
+              </Button>
+          </CardActions>
+      </Card>
+      <Card className={classes.root} style={{ marginTop: "5%" }}>
+          <CardActionArea>
+              <CardMedia
+                className={classes.media}
+                image="/static/images/cgacProfile.jpg"
+                title="Canada Games Aqautic Center"
+              /> 
+              <CardContent>
+                  <Typography gutterBottom variant="h5" component="h2">
+                     South London Community Pool
+                  </Typography>
+                  <Typography variant="body2" color="textSecondary" component="p">
+                      1045 Wonderland Rd North
+
+                  </Typography>
+              </CardContent>
+          </CardActionArea>
+          <CardActions>
+              <Button size="small" color="primary">
+                  View Schedule
+              </Button>
+              <Button size="small" color="primary">
+                  Book Camp
+              </Button>
+          </CardActions>
+      </Card>
     </MuiThemeProvider>
   );
 };

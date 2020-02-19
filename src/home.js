@@ -22,7 +22,7 @@ const Home = () => {
         </Toolbar>
       </AppBar>
       <Card style={{ marginTop: "20%" }}>
-        <CardHeader title="Aquatics Portal" style={{ textAlign: "center" }} />
+        <CardHeader title="Cashier Portal" style={{ textAlign: "center" }} />
         <CardContent>
         <ul>
                             <li> Cash Buddy is designed to help you learn all the information necessary to do your job adequately. </li>
@@ -31,6 +31,14 @@ const Home = () => {
                         </ul>
         </CardContent>
       </Card>
+      <Card>
+    <CardContent>
+    <CardHeader title="Indoor Pools" style={{ textAlign: "center" }} />
+        <Typography>
+            Canada Games Aqautic Center
+        </Typography>
+    </CardContent>
+  </Card>
     </MuiThemeProvider>
   );
 };

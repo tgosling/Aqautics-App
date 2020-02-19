@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Home from './home';
-import IndoorPools from './indoorPools'
+import IndoorPools from './indoorPools';
 
-ReactDOM.render(<Home />, document.getElementById('root'));
+ReactDOM.render(<IndoorPools />, document.getElementById('root'));
