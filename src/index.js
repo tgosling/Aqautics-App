@@ -1,5 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import IndoorPools from './IndoorPools';
+import OutdoorPools from './OutdoorPools';
 
-ReactDOM.render(<IndoorPools />, document.getElementById('root'));
+ReactDOM.render(<OutdoorPools />, document.getElementById('root'));

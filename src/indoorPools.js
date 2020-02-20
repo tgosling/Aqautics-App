@@ -1,7 +1,7 @@
 import React from "react";
 import Page from "./Page/Page";
 import IndoorPool from "./IndoorPool/IndoorPool";
-import { Grid } from "@material-ui/core";
+import { Grid, Typography } from "@material-ui/core";
 
 const pools = [
   {
@@ -42,8 +42,9 @@ const pools = [
 const IndoorPools = () => {
   return (
     <Page title="City of London Aquatics">
-      <div style={{ marginTop: 70 }}>
-        <Grid container spacing={3}>
+      <div style={{ marginTop: 70, marginLeft: 10 }}>
+      <Typography variant="h3" color="inherit">Indoor Pools</Typography>
+        <Grid container spacing={2}>
           {pools.map((pool, idx) => (
             <Grid key={idx} item xs>
               <IndoorPool pool={pool} />
